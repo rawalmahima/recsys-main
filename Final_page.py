@@ -45,7 +45,7 @@ with header2[1]:
     
 
 
-st.write("\\")
+st.write("/")
 
 
 
@@ -77,7 +77,7 @@ def upper():
 ################               Home Page               #################
 def homepage():
     pick_path= selected_path + f"/Recommended/default"
-    img_urls = [pick_path + "\\" + f for f in os.listdir(pick_path) if f.endswith(('.jpg', '.jpeg', '.png', '.webp'))]
+    img_urls = [pick_path + "/" + f for f in os.listdir(pick_path) if f.endswith(('.jpg', '.jpeg', '.png', '.webp'))]
 
     col1, col2, col3, col4, col5, col6 = st.columns(6)
     button1 = col3.button("MEN", key="button1")
@@ -107,7 +107,7 @@ def homepage():
 
     #Default Images
     def_img_path= selected_path + f"/Recommended/default"
-    img_urls = [def_img_path + "\\" + f for f in os.listdir(def_img_path) if f.endswith(('.jpg', '.jpeg', '.png', '.webp'))]
+    img_urls = [def_img_path + "/" + f for f in os.listdir(def_img_path) if f.endswith(('.jpg', '.jpeg', '.png', '.webp'))]
     def_img_name=['Women Cargo', 'Women Top', 'Men Black Shirt', 'Men Blue Shorts', 'Men Check Shirts']
     def_price = ['₹2,999','₹1,199','₹1,549','₹1,999','₹2,399']
     for i in range(5):
@@ -118,7 +118,7 @@ def homepage():
 
     #Men Images
     men_path= selected_path + f"/Recommended/men"
-    men_img_urls = [men_path + "\\" + f for f in os.listdir(men_path) if f.endswith(('.jpg', '.jpeg', '.png', '.webp'))]
+    men_img_urls = [men_path + "/" + f for f in os.listdir(men_path) if f.endswith(('.jpg', '.jpeg', '.png', '.webp'))]
     men_img_name=['Pink Faded Tshirt', "Plain White Tshirt", "Checked Shirt", "White Shorts", "Blue Jeans"]
     men_price=["₹999", "₹699", "₹1,799", "₹1,299", "₹2,299"]
 
@@ -130,7 +130,7 @@ def homepage():
 
     #Women Images
     women_path= selected_path + f"/Recommended/women"
-    women_img_urls = [women_path + "\\" + f for f in os.listdir(women_path) if f.endswith(('.jpg', '.jpeg', '.png', '.webp'))]
+    women_img_urls = [women_path + "/" + f for f in os.listdir(women_path) if f.endswith(('.jpg', '.jpeg', '.png', '.webp'))]
     women_img_name=["Brown Kurti", "Floral Top", "Black Jeans", "Blue Jeans", "White Jeans"]
     women_price=["₹1,299", "₹899", "₹2,299", "₹2,999", "₹2,499"]
 
@@ -148,7 +148,7 @@ def homepage():
     )
 
     rec_main_path= selected_path + f"/Recommended/Random"
-    rec_main_urls = [rec_main_path + "\\" + f for f in os.listdir(rec_main_path) if f.endswith(('.jpg', '.jpeg', '.png', '.webp'))]
+    rec_main_urls = [rec_main_path + "/" + f for f in os.listdir(rec_main_path) if f.endswith(('.jpg', '.jpeg', '.png', '.webp'))]
     rec_img_name=["Yellow Checked Shirt", "White Shirt", "Light Blue Jeans", "Black Checked Top", "White Jeans Women"]
     rec_price=["₹1,899", "₹2,049", "₹2,799", "₹1,299", "₹2,799"]
 
@@ -186,7 +186,7 @@ def shirts_page():
 
     # #########             Content of the Website(Display, Recommend)            #####################
     pick_path= selected_path + f"/Recommended/shirts"
-    uploaded_files = [pick_path + "\\" + f for f in os.listdir(pick_path) if f.endswith(('.jpg', '.jpeg', '.png', '.webp'))]
+    uploaded_files = [pick_path + "/" + f for f in os.listdir(pick_path) if f.endswith(('.jpg', '.jpeg', '.png', '.webp'))]
 
     sel_men_shirt=['Grey Polo Tshirt', 'Pink Plain Tee', 'Pink Faded Tee', 'Mens Polo', 'Plain Grey Tee']
     sel_men_shirt_price = ['₹1,199','₹699','₹849','₹999','₹599']
@@ -294,7 +294,7 @@ def trousers_page():
 
     # #########             Main Content of the Website(Browse, Display, Recommend)            #####################
     pick_path= selected_path + f"/Recommended/pants"
-    uploaded_files = [pick_path + "\\" + f for f in os.listdir(pick_path) if f.endswith(('.jpg', '.jpeg', '.png', '.webp'))]
+    uploaded_files = [pick_path + "/" + f for f in os.listdir(pick_path) if f.endswith(('.jpg', '.jpeg', '.png', '.webp'))]
 
     sel_men_trouser=['Beige Trouser', 'Orange Trouser', 'Grey Formal Pant', 'Blue Jeans', 'Green Trouser']
     sel_men_trouser_price = ['₹2,299','₹1,799','₹2,799','₹2,399','₹1,999']
@@ -416,7 +416,7 @@ else:
 
 # ############                   Footer section             #####################
 # Footer Section
-st.write("\\")  # A horizontal line to separate the content
+st.write("/")  # A horizontal line to separate the content
 
 footer_div = """
     <section class = "contactus", id = "contact">
