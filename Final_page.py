@@ -24,7 +24,7 @@ st.markdown(hide_img_fs, unsafe_allow_html=True)
 header_style = "font-size: 17px; text-transform: uppercase; font-weight: bold;"
 header = st.columns(13)
 with header[0]:
-    st.image(Image.open(os.getcwd()+ f"\Recommended\Logo\Logo.png"), width=50)
+    st.image(Image.open(os.getcwd()+ f"/Recommended/Logo/Logo.png"), width=50)
 with header[1]:
     st.markdown(f"<div style='{header_style}'>TREE&nbspTRENDS</div>", unsafe_allow_html=True)
 with header[10]:
@@ -45,7 +45,7 @@ with header2[1]:
     
 
 
-st.write("---")
+st.write("\\")
 
 
 
@@ -76,7 +76,7 @@ def upper():
 
 ################               Home Page               #################
 def homepage():
-    pick_path= selected_path + f"\Recommended\default"
+    pick_path= selected_path + f"/Recommended/default"
     img_urls = [pick_path + "\\" + f for f in os.listdir(pick_path) if f.endswith(('.jpg', '.jpeg', '.png', '.webp'))]
 
     col1, col2, col3, col4, col5, col6 = st.columns(6)
@@ -106,7 +106,7 @@ def homepage():
 
 
     #Default Images
-    def_img_path= selected_path + f"\Recommended\default"
+    def_img_path= selected_path + f"/Recommended/default"
     img_urls = [def_img_path + "\\" + f for f in os.listdir(def_img_path) if f.endswith(('.jpg', '.jpeg', '.png', '.webp'))]
     def_img_name=['Women Cargo', 'Women Top', 'Men Black Shirt', 'Men Blue Shorts', 'Men Check Shirts']
     def_price = ['₹2,999','₹1,199','₹1,549','₹1,999','₹2,399']
@@ -117,7 +117,7 @@ def homepage():
 
 
     #Men Images
-    men_path= selected_path + f"\Recommended\men"
+    men_path= selected_path + f"/Recommended/men"
     men_img_urls = [men_path + "\\" + f for f in os.listdir(men_path) if f.endswith(('.jpg', '.jpeg', '.png', '.webp'))]
     men_img_name=['Pink Faded Tshirt', "Plain White Tshirt", "Checked Shirt", "White Shorts", "Blue Jeans"]
     men_price=["₹999", "₹699", "₹1,799", "₹1,299", "₹2,299"]
@@ -129,7 +129,7 @@ def homepage():
 
 
     #Women Images
-    women_path= selected_path + f"\Recommended\women"
+    women_path= selected_path + f"/Recommended/women"
     women_img_urls = [women_path + "\\" + f for f in os.listdir(women_path) if f.endswith(('.jpg', '.jpeg', '.png', '.webp'))]
     women_img_name=["Brown Kurti", "Floral Top", "Black Jeans", "Blue Jeans", "White Jeans"]
     women_price=["₹1,299", "₹899", "₹2,299", "₹2,999", "₹2,499"]
@@ -147,7 +147,7 @@ def homepage():
         unsafe_allow_html=True
     )
 
-    rec_main_path= selected_path + f"\Recommended\Random"
+    rec_main_path= selected_path + f"/Recommended/Random"
     rec_main_urls = [rec_main_path + "\\" + f for f in os.listdir(rec_main_path) if f.endswith(('.jpg', '.jpeg', '.png', '.webp'))]
     rec_img_name=["Yellow Checked Shirt", "White Shirt", "Light Blue Jeans", "Black Checked Top", "White Jeans Women"]
     rec_price=["₹1,899", "₹2,049", "₹2,799", "₹1,299", "₹2,799"]
@@ -185,7 +185,7 @@ def shirts_page():
 
 
     # #########             Content of the Website(Display, Recommend)            #####################
-    pick_path= selected_path + f"\Recommended\shirts"
+    pick_path= selected_path + f"/Recommended/shirts"
     uploaded_files = [pick_path + "\\" + f for f in os.listdir(pick_path) if f.endswith(('.jpg', '.jpeg', '.png', '.webp'))]
 
     sel_men_shirt=['Grey Polo Tshirt', 'Pink Plain Tee', 'Pink Faded Tee', 'Mens Polo', 'Plain Grey Tee']
@@ -232,7 +232,7 @@ def shirts_page():
             
             if file_name in recommended_imgs_list:
                 data_path= os.getcwd()
-                recommended_images_path = data_path + f"\Recommended\shirts\{recommended_imgs_list[file_name]}"
+                recommended_images_path = data_path + f"/Recommended/shirts/{recommended_imgs_list[file_name]}"
                 recommended_image_files = os.listdir(recommended_images_path)
 
                 if recommended_image_files:
@@ -256,7 +256,7 @@ def shirts_page():
         if selected_images_col[(idx) % images_per_row].button(complete_button_label, key=f"complete_{file_name}"):
             if file_name in complete_imgs_list:
                 data_path= os.getcwd()
-                complete_images_path = data_path + f"\Recommended\shirts\{complete_imgs_list[file_name]}"
+                complete_images_path = data_path + f"/Recommended/shirts/{complete_imgs_list[file_name]}"
                 complete_image_files = os.listdir(complete_images_path)
                 if complete_image_files:
                     st.subheader(f"Styling Ideas")
@@ -293,7 +293,7 @@ def trousers_page():
 
 
     # #########             Main Content of the Website(Browse, Display, Recommend)            #####################
-    pick_path= selected_path + f"\Recommended\pants"
+    pick_path= selected_path + f"/Recommended/pants"
     uploaded_files = [pick_path + "\\" + f for f in os.listdir(pick_path) if f.endswith(('.jpg', '.jpeg', '.png', '.webp'))]
 
     sel_men_trouser=['Beige Trouser', 'Orange Trouser', 'Grey Formal Pant', 'Blue Jeans', 'Green Trouser']
@@ -339,7 +339,7 @@ def trousers_page():
         if selected_images_col[(idx) % images_per_row].button(recommended_button_label, key={file_name}):
             if file_name in recommended_imgs_list:
                 data_path= os.getcwd()
-                recommended_images_path = data_path + f"\Recommended\pants\{recommended_imgs_list[file_name]}"
+                recommended_images_path = data_path + f"/Recommended/pants/{recommended_imgs_list[file_name]}"
                 recommended_image_files = os.listdir(recommended_images_path)
 
                 if recommended_image_files:
@@ -363,7 +363,7 @@ def trousers_page():
         if selected_images_col[(idx) % images_per_row].button(complete_button_label, key=f"complete_{file_name}"):
             if file_name in complete_imgs_list:
                 data_path= os.getcwd()
-                complete_images_path = data_path + f"\Recommended\pants\{complete_imgs_list[file_name]}"
+                complete_images_path = data_path + f"/Recommended/pants/{complete_imgs_list[file_name]}"
                 complete_image_files = os.listdir(complete_images_path)
                 if complete_image_files:
                     st.subheader(f"Syling Ideas")
@@ -416,7 +416,7 @@ else:
 
 # ############                   Footer section             #####################
 # Footer Section
-st.write("---")  # A horizontal line to separate the content
+st.write("\\")  # A horizontal line to separate the content
 
 footer_div = """
     <section class = "contactus", id = "contact">
